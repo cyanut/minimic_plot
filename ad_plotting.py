@@ -2612,10 +2612,10 @@ if __name__ == "__main__":
                         #min_f = lambda a,b,c,d,e: \
                         #        -logistic_d2(a,b,c,d,e), 
                         p0 = p0,
-                        min_f = min_point_func,
+                        # min_f = min_point_func,
                         #mark_f = lambda k, k0, v_max, v_min: \
                         #        logit(.5, k, k0, v_max, v_min),
-                        # mark_f = lambda x, x0, v_max, v_min, : -x0,
+                        mark_f = lambda x, x0, v_max, v_min, : x0,
                         bootstrap=N_BOOTSTRAP, 
                         axes=axes[base_curve_row + 1][-4:],
                         per_animal=per_animal,
@@ -2695,10 +2695,10 @@ if __name__ == "__main__":
                         #min_f = lambda a,b,c,d,e: \
                         #        -logistic_d2(a,b,c,d,e), 
                         p0 = p0,
-                        min_f = min_point_func,
+                        # min_f = min_point_func,
                         #mark_f = lambda k, k0, v_max, v_min: \
                         #        logit(.5, k, k0, v_max, v_min),
-                        # mark_f = lambda x, x0, v_max, v_min: -x0,
+                        mark_f = lambda x, x0, v_max, v_min: x0,
                         bootstrap=N_BOOTSTRAP, 
                         #axes=axes[curve_curr_row][curve_curr_col:curve_curr_col + 4],
                         axes=axes[base_curve_row + 3][-4:],
@@ -2736,10 +2736,10 @@ if __name__ == "__main__":
                         #min_f = lambda a,b,c,d,e: \
                         #        -logistic_d2(a,b,c,d,e), 
                         p0 = p0,
-                        min_f = min_point_func,
+                        # min_f = min_point_func,
                         #mark_f = lambda k, k0, v_max, v_min: \
                         #        logit(.5, k, k0, v_max, v_min),
-                        # mark_f = lambda x, x0, v_max, v_min: -x0,
+                        mark_f = lambda x, x0, v_max, v_min: x0,
                         bootstrap=N_BOOTSTRAP, 
                         axes=axes[base_curve_row][-4:],
                         per_animal=per_animal,
@@ -2774,10 +2774,10 @@ if __name__ == "__main__":
                         #min_f = lambda a,b,c,d,e: \
                         #        -logistic_d2(a,b,c,d,e), 
                         p0 = p0,
-                        min_f = min_point_func,
+                        # min_f = min_point_func,
                         #mark_f = lambda k, k0, v_max, v_min: \
                         #        logit(.5, k, k0, v_max, v_min),
-                        # mark_f = lambda x, x0, v_max, v_min: -x0,
+                        mark_f = lambda x, x0, v_max, v_min: x0,
                         bootstrap=N_BOOTSTRAP, 
                         axes=axes[base_curve_row + 2][-4:],
                         per_animal=per_animal,
@@ -2833,10 +2833,10 @@ if __name__ == "__main__":
                         #min_f = lambda a,b,c,d,e: \
                         #        -logistic_d2(a,b,c,d,e), 
                         p0 = p0,
-                        min_f = min_point_func,
+                        # min_f = min_point_func,
                         #mark_f = lambda k, k0, v_max, v_min: \
                         #        logit(.5, k, k0, v_max, v_min),
-                        # mark_f = lambda x, x0, v_max, v_min: x0,
+                        mark_f = lambda x, x0, v_max, v_min: x0,
                         bootstrap=N_BOOTSTRAP, 
                         # axes=axes[curve_curr_row][curve_curr_col:curve_curr_col + 4],
                         axes=axes[base_curve_row + 4][-4:],
@@ -2917,9 +2917,9 @@ if __name__ == "__main__":
     # YLIM0 = [-1.5, .5] 
     # YLIM1 = [0, 2.]
     # YLIM2 = [0, .5]
-    YLIM0 = [-2.2, 0]
-    YLIM1 = [0, 1.5]
-    YLIM2 = [-1, .5]
+    YLIM0 = [-2, 1]
+    YLIM1 = [-2, 1]
+    YLIM2 = [-2, 1]
     # YLIM1 = [.5, -.5]
     # YLIM2 = [.1, -.1]
     bayes_stats([lda_raw_res_into_f_excl[0]], [4], lda_curve_mc_res, ylim=YLIM0, axes=axes[curr_row][curr_col:curr_col + 2], inset= {"data_coords":[(-.5, .70), (2.5, .3)], 
@@ -3032,7 +3032,7 @@ if __name__ == "__main__":
     add_img(fig, get_img("align-schema-2.svg"), \
             lbw*2, lb_global + lh_global + 2, 1.)
     add_img(fig, HEATMAP_TEMP_FILE, \
-            lbw, (lb_global + lh_global) * 2 + 2, 1.1)
+            lbw*2-1, (lb_global + lh_global) * 2 + 2, 1.1)
     add_img(fig, get_img("timing-stats.svg"), \
             lbw*2 + 3.9, (lb_global + lh_global) * 6 + 10.7, .124)
     #add_img(fig, get_img("align-schema-2.svg"), \
